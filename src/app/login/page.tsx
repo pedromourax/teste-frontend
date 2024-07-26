@@ -1,18 +1,20 @@
 "use client"
 
 import handleLogin from "@/app/login/login";
+import Header from "@/components/header";
 import { ArrowLeftEndOnRectangleIcon } from "@heroicons/react/16/solid";
 import Head from "next/head";
 import { useFormState } from "react-dom";
+    
 
 export default function login() {
     const [error, formAction] = useFormState(handleLogin, undefined)
 
     return (
         <div className="h-dvh flex flex-col items-center justify-center p-6 sm:px-6 lg:px-8">
-        <Head>
+        {/* <Head>
             <title>Home</title>
-        </Head>
+        </Head> */}
         <div className="flex flex-col justify-center items-center">
             
 

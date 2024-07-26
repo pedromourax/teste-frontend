@@ -4,7 +4,6 @@ import { environment } from "@/app/enviroment"
 import { useState } from "react"
 
 export default function UploadFile(token: any, grupoId: any) {
-    console.log(token)
     const [file, setFile] = useState<File>()
     const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
@@ -41,7 +40,7 @@ export default function UploadFile(token: any, grupoId: any) {
 
             <div className="min-w-80 max-w-fit mb-4">
                 <p className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                  Enviar arquivo
+                  Enviar arquivo: <span className="text-xs text-gray-400" > .txt .csv .xlsx </span>
                 </p>
                 <input
                 required={true} 
