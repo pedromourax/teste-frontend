@@ -1,6 +1,7 @@
 "use client"
 
 import handleLogin from "@/app/login/login";
+import { ArrowLeftEndOnRectangleIcon } from "@heroicons/react/16/solid";
 import Head from "next/head";
 import { useFormState } from "react-dom";
 
@@ -8,12 +9,15 @@ export default function login() {
     const [error, formAction] = useFormState(handleLogin, undefined)
 
     return (
-        <div className="h-96 flex flex-col items-center justify-center p-6 sm:px-6 lg:px-8">
+        <div className="h-dvh flex flex-col items-center justify-center p-6 sm:px-6 lg:px-8">
         <Head>
             <title>Home</title>
         </Head>
         <div className="flex flex-col justify-center items-center">
-            <h1 className="text-xl font-extrabold p-6"> Login </h1>
+            
+
+            <div className="flex items-center gap-2 text-xl font-extrabold p-6"> Login <ArrowLeftEndOnRectangleIcon className=" size-8 text-white"></ArrowLeftEndOnRectangleIcon></div>
+            
             <form className="flex flex-col gap-1 w-full" action={formAction}>
 
                 <input type="text" placeholder="usuario"

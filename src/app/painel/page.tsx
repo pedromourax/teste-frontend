@@ -20,13 +20,12 @@ export default function Painel() {
 
     return (
         <div className="h-dvh flex flex-col items-center justify-center ">
-            <button >
+            <button className="w-80 border-2 border-white p-2 mb-12">
                 CRIAR GRUPO
             </button>
-
             <div className="flex w-80">
-                <div className="border-2 gap-2 border-white w-32 p-2">Grupo</div>
-                <div className="border-2 gap-2 border-white w-32 p-2">ID</div>
+                <div className="border-2 gap-2 border-white w-40 p-2">Grupo</div>
+                <div className="border-2 gap-2 border-white w-40 p-2">ID</div>
             </div>
             {grupos && grupos.map((grupo: any) => (
                 <Link href={`/painel/${grupo.id}`} className="flex w-80">  
@@ -34,7 +33,6 @@ export default function Painel() {
                     <div className="border-2 w-full border-gray-200 p-2"> {grupo.id} </div>
                 </Link>
             ))}
-            
         </div>
     )
 }
