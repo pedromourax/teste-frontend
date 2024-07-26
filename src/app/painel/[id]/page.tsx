@@ -12,7 +12,6 @@ export default async function groupoDetail({params, searchParams}){
 
     const start = (Number(pag) - 1) * Number(por_pag) 
     const end = start + Number(por_pag)
-    console.log("OLAAAAAAA")
 
     async function getGrupo(id) {
         try {
@@ -24,7 +23,6 @@ export default async function groupoDetail({params, searchParams}){
                 }
             })
             if (response) {
-                console.log(params)
                 const responseBody = await response.json();
                 responseBody.token = cookie?.value
                 return responseBody;
@@ -38,7 +36,6 @@ export default async function groupoDetail({params, searchParams}){
     const retorno = await getGrupo(id)
 
     const usuarios_pag = retorno.usuarios.slice(start, end)
-    console.log(usuarios_pag, start, end, pag)
 
     return (
         <div className="min-h-dvh max-h-fit flex flex-col justify-center items-center">
